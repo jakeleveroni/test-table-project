@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  AgentToolsTableBuilder,
+  GetAtBaseTable,
+  TableWrapperComponent
+} from "jlev-react-table-wrapper";
+import {generateBasicTableData} from "./tests/data-generators/data.generator";
 
 function App() {
+  let builder = new AgentToolsTableBuilder();
+  let tableModel = GetAtBaseTable(generateBasicTableData(10));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <TableWrapperComponent tableModel={tableModel} tableBuilder={builder}/>
     </div>
   );
 }
