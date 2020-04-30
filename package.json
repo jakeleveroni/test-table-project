@@ -10,7 +10,7 @@
     "@popperjs/core": "^2.0.0-rc.1",
     "bootstrap": "^4.4.1",
     "bootstrap-select": "^1.13.12",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
